@@ -3499,8 +3499,8 @@ Module.expectedDataFileDownloads++;
                               Module['locateFile'](REMOTE_PACKAGE_BASE) :
                               ((Module['filePackagePrefixURL'] || '') + REMOTE_PACKAGE_BASE);
   
-      var REMOTE_PACKAGE_SIZE = 18201490;
-      var PACKAGE_UUID = 'fd3fc665-e0a7-4f5c-b0d6-bc14e902ff2a';
+      var REMOTE_PACKAGE_SIZE = 18201630;
+      var PACKAGE_UUID = 'ffddd6c1-5ae1-4bdc-acad-7d0cebd7405e';
     
     function fetchRemotePackage(packageName, packageSize, callback, errback) {
       var xhr = new XMLHttpRequest();
@@ -3604,13 +3604,13 @@ Module['FS_createPath']('/Managed/mono', '2.0', true, true);
       },
     };
 
-      new DataRequest(0, 15347140, 0, 0).open('GET', '/data.unity3d');
-    new DataRequest(15347140, 15348840, 0, 0).open('GET', '/methods_pointedto_by_uievents.xml');
-    new DataRequest(15348840, 15348861, 0, 0).open('GET', '/PlayerConnectionConfigFile');
-    new DataRequest(15348861, 15353021, 0, 0).open('GET', '/preserved_derived_types.xml');
-    new DataRequest(15353021, 17298893, 0, 0).open('GET', '/Il2CppData/Metadata/global-metadata.dat');
-    new DataRequest(17298893, 18173865, 0, 0).open('GET', '/Resources/unity_default_resources');
-    new DataRequest(18173865, 18201490, 0, 0).open('GET', '/Managed/mono/2.0/machine.config');
+      new DataRequest(0, 15347208, 0, 0).open('GET', '/data.unity3d');
+    new DataRequest(15347208, 15348908, 0, 0).open('GET', '/methods_pointedto_by_uievents.xml');
+    new DataRequest(15348908, 15348929, 0, 0).open('GET', '/PlayerConnectionConfigFile');
+    new DataRequest(15348929, 15353089, 0, 0).open('GET', '/preserved_derived_types.xml');
+    new DataRequest(15353089, 17299033, 0, 0).open('GET', '/Il2CppData/Metadata/global-metadata.dat');
+    new DataRequest(17299033, 18174005, 0, 0).open('GET', '/Resources/unity_default_resources');
+    new DataRequest(18174005, 18201630, 0, 0).open('GET', '/Managed/mono/2.0/machine.config');
 
     function processPackageData(arrayBuffer) {
       Module.finishedDataFileDownloads++;
