@@ -3489,8 +3489,8 @@ Module.expectedDataFileDownloads++;
     } else {
       throw 'using preloaded data can only be done on a web page or in a web worker';
     }
-    var PACKAGE_NAME = 'MiniGolf_WGL_1.0.data';
-    var REMOTE_PACKAGE_BASE = 'MiniGolf_WGL_1.0.data';
+    var PACKAGE_NAME = 'MiniGolf_WGL_1.1.data';
+    var REMOTE_PACKAGE_BASE = 'MiniGolf_WGL_1.1.data';
     if (typeof Module['locateFilePackage'] === 'function' && !Module['locateFile']) {
       Module['locateFile'] = Module['locateFilePackage'];
       Module.printErr('warning: you defined Module.locateFilePackage, that has been renamed to Module.locateFile (using your locateFilePackage for now)');
@@ -3499,8 +3499,8 @@ Module.expectedDataFileDownloads++;
                               Module['locateFile'](REMOTE_PACKAGE_BASE) :
                               ((Module['filePackagePrefixURL'] || '') + REMOTE_PACKAGE_BASE);
   
-      var REMOTE_PACKAGE_SIZE = 18201568;
-      var PACKAGE_UUID = 'fbc6c324-8341-48da-ba51-7a43f9203fb3';
+      var REMOTE_PACKAGE_SIZE = 18276134;
+      var PACKAGE_UUID = 'ebcd3137-6fa6-4248-9700-863305fb7c24';
     
     function fetchRemotePackage(packageName, packageSize, callback, errback) {
       var xhr = new XMLHttpRequest();
@@ -3604,13 +3604,13 @@ Module['FS_createPath']('/Managed/mono', '2.0', true, true);
       },
     };
 
-      new DataRequest(0, 15347146, 0, 0).open('GET', '/data.unity3d');
-    new DataRequest(15347146, 15348846, 0, 0).open('GET', '/methods_pointedto_by_uievents.xml');
-    new DataRequest(15348846, 15348867, 0, 0).open('GET', '/PlayerConnectionConfigFile');
-    new DataRequest(15348867, 15353027, 0, 0).open('GET', '/preserved_derived_types.xml');
-    new DataRequest(15353027, 17298971, 0, 0).open('GET', '/Il2CppData/Metadata/global-metadata.dat');
-    new DataRequest(17298971, 18173943, 0, 0).open('GET', '/Resources/unity_default_resources');
-    new DataRequest(18173943, 18201568, 0, 0).open('GET', '/Managed/mono/2.0/machine.config');
+      new DataRequest(0, 15416951, 0, 0).open('GET', '/data.unity3d');
+    new DataRequest(15416951, 15418716, 0, 0).open('GET', '/methods_pointedto_by_uievents.xml');
+    new DataRequest(15418716, 15418737, 0, 0).open('GET', '/PlayerConnectionConfigFile');
+    new DataRequest(15418737, 15422897, 0, 0).open('GET', '/preserved_derived_types.xml');
+    new DataRequest(15422897, 17373537, 0, 0).open('GET', '/Il2CppData/Metadata/global-metadata.dat');
+    new DataRequest(17373537, 18248509, 0, 0).open('GET', '/Resources/unity_default_resources');
+    new DataRequest(18248509, 18276134, 0, 0).open('GET', '/Managed/mono/2.0/machine.config');
 
     function processPackageData(arrayBuffer) {
       Module.finishedDataFileDownloads++;
@@ -3627,10 +3627,10 @@ Module['FS_createPath']('/Managed/mono', '2.0', true, true);
           DataRequest.prototype.requests["/Il2CppData/Metadata/global-metadata.dat"].onload();
           DataRequest.prototype.requests["/Resources/unity_default_resources"].onload();
           DataRequest.prototype.requests["/Managed/mono/2.0/machine.config"].onload();
-          Module['removeRunDependency']('datafile_MiniGolf_WGL_1.0.data');
+          Module['removeRunDependency']('datafile_MiniGolf_WGL_1.1.data');
 
     };
-    Module['addRunDependency']('datafile_MiniGolf_WGL_1.0.data');
+    Module['addRunDependency']('datafile_MiniGolf_WGL_1.1.data');
   
     if (!Module.preloadResults) Module.preloadResults = {};
   
