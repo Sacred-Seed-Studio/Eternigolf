@@ -1,35 +1,82 @@
 <!doctype html>
 <html lang="en-us">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Eternigolf</title>
+    <title>Eternigolf - Procedurally generated minigolf</title>
+    <meta name="description" content="A procedurally generated minigolf game with endless possibilites, track creation, and social sharing" />
+    <meta name="author" content="Sacred Seed Studio">
+    <meta name="keywords" content="video game, mini golf, android, webgl, eternigolf, ios, iphone, ipad">
+
+    <!-- mobile chrome -->
+        <meta name="theme-color" content="#222">
+
+    <!-- Icons -->
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="icon" sizes="192x192" href="TemplateData/icons/icon_192.png"> <!-- mobile chrome -->
+        <link rel="icon" type="image/png" href="TemplateData/icons/icon_160.png"> <!-- Opera Speed Dial Favicon -->
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="TemplateData/icons/icon_114.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="TemplateData/icons/icon_72.png">
+        <link rel="apple-touch-icon-precomposed" href="TemplateData/icons/icon_57.png">
+
+    <!-- Schema.org markup for Google+ -->
+        <meta itemprop="name" content="Eternigolf - Procedurally generated minigolf">
+        <meta itemprop="description" content="A procedurally generated minigolf game with endless possibilites, track creation, and social sharing">
+        <meta itemprop="image" content="http://www.eternigolf.com/media/facebook.png">
+
+    <!-- Twitter Card data -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@sacredseedstdio">
+        <meta name="twitter:creator" content="@sacredseedstdio">
+        <meta name="twitter:title" content="Eternigolf - Procedurally generated minigolf">
+        <meta name="twitter:description" content="A procedurally generated minigolf game with endless possibilites, track creation, and social">
+        <!-- Twitter summary card with large image must be at least 280x150px -->
+        <meta name="twitter:image" content="http://www.eternigolf.com/media/twitter.png">
+
+    <!-- Open Graph data -->
+        <meta property="og:title" content="Eternigolf - Procedurally generated minigolf">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="http://www.eternigolf.com/">
+        <meta property="og:image" content="http://www.eternigolf.com/media/facebook.png">
+        <meta property="og:description" content="A procedurally generated minigolf game with endless possibilites, track creation, and social sharing">
+        <meta property="og:site_name" content="Eternigolf">
+        <meta property="article:published_time" content="2016-10-25T05:59:00+01:00">
+        <meta property="article:modified_time" content="2016-10-25T05:59:00+01:00">
+    
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Denk+One" rel="stylesheet">
     <link rel="stylesheet" href="TemplateData/style.css">
-    <link rel="shortcut icon" href="TemplateData/favicon.ico" />
     <script src="TemplateData/UnityProgress.js"></script>
-  </head>
-  <body class="template">
-    <p class="header"><span>Unity WebGL Player | </span>Eternigolf</p>
+</head>
+<body class="template">
+    <nav>
+        <ul>
+            <a href="http://www.eternigolf.com"><li>Eternigolf</li></a>
+            <a href=""><li class="right apple"><img src="TemplateData/app-store-ios-badge.svg"></li></a>
+            <a href=""><li class="right"><img src="TemplateData/google-play-android-badge.png"></li></a>
+        </ul>
+    </nav>
     <div class="template-wrap clear">
-      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
-      <br>
-      <div class="logo"></div>
-      <div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
-      <div class="title">Eternigolf</div>
+        <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
     </div>
-    <p class="footer">&laquo; created with <a href="http://unity3d.com/" title="Go to unity3d.com">Unity</a> &raquo;</p>
+    <div id="loading-box">
+        <div id="loader"></div>
+        <p id="info">Loading...</p>
+    </div>
     <script type='text/javascript'>
   var Module = {
     TOTAL_MEMORY: 268435456,
     errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
     compatibilitycheck: null,
-    dataUrl: "Development/MiniGolf_WGL_1.1.data",
-    codeUrl: "Development/MiniGolf_WGL_1.1.js",
-    memUrl: "Development/MiniGolf_WGL_1.1.mem",
-    
+    backgroundColor: "#000000",
+    splashStyle: "Light",
+    dataUrl: "Release/EternigolfWebGL_1.0.data",
+    codeUrl: "Release/EternigolfWebGL_1.0.js",
+    asmUrl: "Release/EternigolfWebGL_1.0.asm.js",
+    memUrl: "Release/EternigolfWebGL_1.0.mem",
   };
 </script>
-<script src="Development/UnityLoader.js"></script>
+<script src="Release/UnityLoader.js"></script>
 
-  </body>
+</body>
 </html>
