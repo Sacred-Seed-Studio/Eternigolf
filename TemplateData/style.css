@@ -17,12 +17,20 @@ body {
   color: white;
 }
 
+a {
+  color: #999;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #999;
+}
+
 nav {
   margin: 0px 20px;
 }
 
 nav a {
-  text-decoration: none;
   color: white;
 }
 
@@ -45,6 +53,47 @@ nav ul li img {
   max-height: 50px;
   height: 50px;
 }
+
+footer {
+    position: absolute;
+    bottom: 0.4em;
+    text-align: center;
+    width: 100%;
+    font-size: 1.25em;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* ~-* Sharing *-~ */
+
+  .share {
+    text-align: center;
+  }
+  .share h4 {
+    margin: 0;
+  }
+  .share a .google,
+  .share a .reddit {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background-color: #DC4E41;
+  }
+  .share a .google svg,
+  .share a .reddit svg {
+    width: 24px;
+  }
+  .share a .reddit {
+    background-color: #EF7E00;
+  }
+  .share a svg {
+    width: 48px;
+    height: 48px;
+  }
+
+/* ~-* ./Sharing *-~ */
 
 #loading-box {
     width: 100%;
