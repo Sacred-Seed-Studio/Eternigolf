@@ -66,6 +66,12 @@ footer p {
   margin: 0;
 }
 
+iframe {
+  max-width: 90%;
+  display: block;
+  margin: 0 auto;
+}
+
 /* ~-* Sharing *-~ */
 
   .share {
