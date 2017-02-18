@@ -92,10 +92,55 @@
     </footer>
 
     <script type='text/javascript'>
+    function removeUnity(){
+        console.log('removeUnity');
+        var youtubeURL = "https://www.youtube-nocookie.com/embed/3Tz35wbfXg8?rel=0&amp;showinfo=0";
+        var unityCanvas = document.getElementById('canvas');
+        var height = unityCanvas.getAttribute('height'); 
+        var width = unityCanvas.getAttribute('width');
+        unityCanvas.parentNode.removeChild(unityCanvas);
+        var iframe = document.createElement('iframe');
+        var container = document.getElementById('template-wrap');
+        iframe.setAttribute('width', width);
+        iframe.setAttribute('height', height);
+        iframe.setAttribute('src', youtubeURL);
+        iframe.setAttribute('frameborder', '0');
+        iframe.setAttribute('allowfullscreen', '');
+        container.appendChild(iframe);
+    }
+    function recommendFirefox(){
+        console.log('recommendFirefox');
+    }
   var Module = {
     TOTAL_MEMORY: 268435456,
     errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
-    compatibilitycheck: null,
+    compatibilitycheck: function() {
+        console.log("compatibilitycheck", {hasWebGL, mobile, browser});
+        if (hasWebGL){
+            if (mobile){
+                removeUnity();
+            }
+            else {
+                // If unsupported browser
+                if (-1 == browser.indexOf("Firefox") && -1 == browser.indexOf("Chrome") && -1 == browser.indexOf("Safari")){
+                    var cwb = confirm("Please note that your browser is not currently supported for Eternigolf WebGL. We recommend installing Firefox. Press OK to try running anyway. Press cancel to view the trailer and other options");
+                    if (!cwb){
+                        removeUnity();
+                        recommendFirefox();
+                    }
+                }
+            }
+        }
+        else {
+            if (mobile){
+                removeUnity();
+            }
+            else {
+                removeUnity();
+                recommendFirefox();
+            }
+        }
+    },,
     backgroundColor: "#000000",
     splashStyle: "Light",
     dataUrl: "Release/Desktop.data",
